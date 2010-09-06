@@ -19,8 +19,9 @@ $tables = array(
   entry_date T DEFAULT 'NOW',
   end_date T,
   source C(20) PRIMARY,
-  cross_reference C(22) PRIMARY,
-  data X
+  xref C(22) PRIMARY,
+  data X,
+  xorder I2
   ",
 
 'property_type' => "
