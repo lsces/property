@@ -2,7 +2,7 @@
 $tables = array(
 
 'property' => "
-  CONTENT_ID I8 NOTNULL,
+  CONTENT_ID I8 NOTNULL PRIMARY,
   PROPERTY_ID I8 NOTNULL,
   PARENT_ID I8,
   ADDRESS_ID I8,
@@ -12,16 +12,17 @@ $tables = array(
   ",
 
 'property_xref' => "
-  content_id I8 NOTNULL,
+  content_id I8 NOTNULL PRIMARY,
   xref_key C(14),
   start_date T DEFAULT 'NOW',
   last_update_date T DEFAULT 'NOW',
   entry_date T DEFAULT 'NOW',
   end_date T,
   source C(20) PRIMARY,
-  xref C(22) PRIMARY,
-  data X,
-  xorder I2
+  xorder I2 PRIMARY,
+  contact_id I8,
+  xref C(22),
+  data X
   ",
 
 'property_type' => "
@@ -30,7 +31,7 @@ $tables = array(
 ",
 
 'property_xref_source' => "
-  source C(6) PRIMARY,
+  source C(20) PRIMARY,
   cross_ref_title C(64),
   cross_ref_href C(256),
   data X
