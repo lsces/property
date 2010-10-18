@@ -1,2 +1,5 @@
+THIS HAS BEEN ROLLED BACK INTO contact package. property records are just a different 'contact' reference but without a person's name.
+It will be removed once things have been tidied up on contact repo
+
 Property package allows contact and xref references to be displayed gainst the managed property list
 This is being developed initially for a keyholding security management system, but is designed as a core package for any property asset management.
